@@ -54,7 +54,7 @@ pipeline {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
             dir('.') { // ✅ Must have curly braces
                 sh '''
-                    git config user.email "niranjan.ricis.bca.1720@gmail.com"
+                    git config user.email "nirukumar417@gmail.com"
                     git config user.name "it2dev"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" spring-boot-app-manifests/deployment.yml
